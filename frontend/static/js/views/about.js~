@@ -1,0 +1,162 @@
+import AbstractView from "./AbstractView.js";
+
+export default class extends AbstractView {
+    constructor(params) {
+        super(params);
+        this.postId = params.id;
+        this.setTitle("SUBCON | About");
+    }
+
+    async getHtml() {
+        return `
+            <div class="banner-image">
+            <div class="fade">
+                <div class="banner-content">
+                    <h1>GET TO KNOW US</h1>
+                    <p>Are you curious?</p>  
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content about-container">
+            <div class="about">
+                <p class="title">About Us</p>
+                <p class="body">At Subcon &reg, we are more than just an organization—we are pioneers in the field of education, dedicated to reshaping the landscape of learning and empowering individuals to unlock their full potential. Our mission is simple yet profound: to revolutionize the way we perceive and engage with knowledge, making the process of learning not only accessible but also enjoyable and rewarding.</p>
+
+<p class="body">Central to our ethos is the belief that learning should be a dynamic and interactive experience, one that stimulates the mind and ignites the spark of curiosity within each individual. That's why we've developed a unique approach to learning that leverages the power of questions to catalyze the acquisition and retention of information.</p>
+
+<p class="body">Through our innovative platform, we present learners with thought-provoking questions that challenge their assumptions, stimulate critical thinking, and spark meaningful insights. By engaging actively with the material through a series of guided questions and answers, students are able to internalize key concepts more effectively and apply them in real-world contexts.</p>
+
+<p class="body">But we don't stop there. In addition to fostering a deeper understanding of the subject matter, we also incentivize learning through a system of rewards and recognition. Students who demonstrate mastery of the material by answering questions correctly are rewarded with a variety of incentives, ranging from virtual badges and accolades to tangible prizes and rewards.</p>
+
+<p class="body">By gamifying the learning experience and infusing it with elements of competition and reward, we seek to reignite the flame of curiosity and instill a sense of excitement and enthusiasm for learning. Our platform isn't just about memorizing facts and figures—it's about fostering a lifelong love of learning and empowering individuals to pursue their passions with confidence and conviction.</p>
+
+<p class="body">At Subcon &reg, we are committed to pushing the boundaries of traditional education and reimagining the possibilities of what learning can be. Join us on this transformative journey as we redefine the future of education and empower individuals to unlock their limitless potential. Together, we can change the history of learning—and shape a brighter, more enlightened future for generations to come.</p>
+            </div>
+            <div class="about">
+                <p class="title">Mission</p>
+                <p class="body">Our mission is to revolutionize education by providing an interactive and rewarding learning experience that empowers individuals to unlock their full potential, foster a lifelong love of learning, and pursue their passions with confidence and conviction. Through our innovative platform, we aim to democratize access to high-quality educational content, inspire curiosity, and cultivate a supportive community of learners dedicated to personal growth, academic excellence, and the pursuit of knowledge.</p>
+            </div>
+            <div class="about">
+                <p class="title">Vision</p>
+                <p class="body">Our vision is to create a world where learning knows no boundaries—a world where individuals of all ages, backgrounds, and abilities have equal access to transformative educational experiences that empower them to thrive in an ever-evolving global landscape. We envision a future where education is not just a means to an end, but a lifelong journey of exploration, discovery, and fulfillment, where every learner has the tools, resources, and support they need to unleash their limitless potential and shape a brighter, more enlightened future for themselves and generations to come.</p>
+            </div>
+            <div class="about">
+                <p class="title">How everything works</p>
+                
+<p class="body">1. <b>Gather Your Group</b>: Start by gathering at least 10 of your classmates or friends who are interested in participating in a challenge together.</p>
+
+<p class="body">2. <b>Choose Your Challenge Amount</b>: Decide on the amount of money you want to contribute to the challenge. The minimum contribution per person is R2 (South African Rand).</p>
+
+<p class="body">3. <b>Select Your Mode</b>: Depending on the number of participants and the total amount you want to contribute, choose a "Mode" that suits your group. For example, if you have 10 participants and each is contributing R20, you would choose "Mode 1" and "Level 19". Each "Level" corresponds to the amount of money you want to contribute minus one, and the "Mode" increases in increments of ten participants.</p>
+
+<p class="body">4. <b>Notification and Updates</b>: Once you've selected your Mode and Level, our platform will keep you updated with notifications regarding the progress of the challenge, reminders, and any other essential information you need to know.</p>
+
+<p class="body">5. <b>Challenge Completion</b>: Once your group has reached the required number of participants and contributions for your chosen Mode and Level, the challenge will be completed, and the winnings will be distributed accordingly.</p>
+
+<p class="body">In essence, our platform provides a fun and interactive way for groups of friends or classmates to come together, contribute to challenges, and potentially win rewards based on their collective participation. With clear guidelines and notifications to keep everyone informed, participating in challenges becomes a seamless and enjoyable experience for all involved.</p>
+            </div>
+            <div class="about">
+                <p class="title">What We Offer</p>
+                <p class="title-2">Education</p>
+                <p class="body">In the realm of education, our primary aim is to equip you with the compelling rationale behind acquiring essential knowledge. While the prospect of delving into books initially carries a sense of excitement and curiosity, sustaining that motivation can often prove to be a challenging endeavor. This is precisely where our platform endeavors to make a significant impact.</p>
+
+<p class="body">In today's fast-paced world, characterized by an ever-increasing array of distractions, the collective attention span of individuals is dwindling. The pervasive influence of technology, coupled with the incessant barrage of stimuli vying for our attention, has contributed to this phenomenon. Consequently, the traditional approach of absorbing vast amounts of information from extensive library sessions is becoming increasingly untenable.</p>
+
+<p class="body">Recognizing the need for a paradigm shift in the way knowledge is acquired and assimilated, we advocate for a more streamlined and focused approach. Rather than attempting to digest the contents of an entire library, we emphasize the efficacy of mastering targeted subsets of information. By honing in on specific topics and concepts, learners can optimize their cognitive resources and enhance their comprehension and retention levels.</p>
+
+<p class="body">Our platform serves as a beacon of guidance and support in this endeavor, offering a curated selection of educational materials tailored to suit individual learning preferences and objectives. Through strategic curation and personalized recommendations, we endeavor to reignite the spark of curiosity and foster a renewed sense of enthusiasm for learning.</p>
+
+<p class="body">Moreover, our platform leverages innovative pedagogical techniques and interactive learning methodologies to engage learners in meaningful and immersive educational experiences. From gamified quizzes and interactive simulations to multimedia-rich content and real-world applications, we strive to transcend the traditional confines of rote memorization and passive consumption.</p>
+
+<p class="body">At the heart of our mission lies a deep-seated commitment to empowering individuals with the knowledge and skills they need to thrive in an increasingly complex and interconnected world. By instilling a passion for lifelong learning and cultivating a growth mindset, we aim to equip learners with the tools and resources they need to navigate the challenges and opportunities that lie ahead.</p>
+
+<p class="body">In essence, our platform represents a catalyst for intellectual exploration and discovery, a gateway to a world of endless possibilities and opportunities. Join us on this transformative journey as we unlock the boundless potential of the human mind and pave the way for a brighter and more enlightened future.</p>
+                <p class="title-2">Rewards</p>
+                <p class="body">In the realm of education, the concept of rewards serves as a powerful catalyst for motivation and engagement, igniting a sense of purpose and direction in the pursuit of knowledge. The promise of a tangible reward waiting just around the corner serves as a beacon of encouragement, enticing students to embark on their academic journey with renewed enthusiasm and determination.</p>
+
+<p class="body">For many students, the desire to study and excel academically is inherently ingrained within them. However, as the realities of the educational landscape unfold, the realization dawns that this journey is indeed a long-term investment, requiring patience, perseverance, and unwavering commitment. It is during these moments of doubt and uncertainty that the allure of immediate gratification often gives way to feelings of frustration and disillusionment.</p>
+
+<p class="body">It is at this critical juncture that our platform steps in, bridging the gap between aspiration and achievement, and alleviating the sense of impatience that often accompanies the pursuit of academic excellence. By integrating a rewards system into the learning experience, we seek to imbue each study session with a sense of purpose and anticipation, transforming the mundane into the extraordinary, and infusing every moment with the promise of possibility.</p>
+
+<p class="body">The essence of our rewards system lies not merely in the attainment of material incentives but in the intrinsic value it imparts to the learning process itself. Each reward serves as a symbol of progress and accomplishment, a testament to the dedication and effort invested in the pursuit of academic goals. Whether it be a virtual badge commemorating a milestone achievement or a tangible prize celebrating a noteworthy accomplishment, each reward serves to validate and reinforce the student's sense of agency and capability.</p>
+
+<p class="body">Moreover, the introduction of a rewards system serves as a catalyst for positive behavior reinforcement, incentivizing students to actively engage with course material, participate in collaborative learning activities, and demonstrate mastery of key concepts and skills. By aligning incentives with desired outcomes, we create a mutually beneficial ecosystem wherein students are empowered to take ownership of their learning journey and educators are provided with valuable insights into student progress and performance.</p>
+
+<p class="body">In essence, our rewards system represents more than just a token of appreciation; it is a testament to our unwavering commitment to student success and empowerment. Through the strategic integration of rewards into the learning experience, we seek to inspire a culture of excellence, resilience, and lifelong learning, where every milestone achieved serves as a stepping stone towards a brighter and more promising future. Join us as we embark on this transformative journey together, where the pursuit of knowledge is celebrated, and every achievement is a cause for celebration.</p>
+                <p class="title-2">Educational Tips & Tricks</p>
+                <p class="body">Confidence, while often celebrated as a positive trait, can indeed take on a negative guise when it leads individuals to believe that their understanding of a subject is absolute, even when it may be flawed or incomplete. This phenomenon, sometimes referred to as negative confidence, stems from a false sense of certainty that precludes individuals from questioning their assumptions or seeking out alternative perspectives.</p>
+
+<p class="body">The danger of negative confidence lies in its propensity to stifle curiosity and impede intellectual growth. When individuals operate under the assumption that they possess all the answers, they become resistant to new ideas and perspectives, thereby limiting their capacity for innovation and discovery. In essence, negative confidence represents a cognitive barrier that prevents individuals from venturing beyond the confines of their existing knowledge and exploring the vast expanse of the unknown.</p>
+
+<p class="body">The antidote to negative confidence lies in the recognition of one's limitations and the embrace of intellectual humility. By acknowledging that our understanding of the world is inherently fallible and subject to revision, we open ourselves up to the possibility of growth and enlightenment. This process of self-reflection and self-correction is at the heart of the research endeavor, wherein individuals embark on a quest for knowledge and truth, unencumbered by preconceived notions or biases.</p>
+
+<p class="body">However, the journey of research can be arduous and time-consuming, requiring a significant investment of effort and resources. This is where our platform seeks to intervene, offering a shortcut to the learning process by providing access to curated educational resources and expert guidance. Through our comprehensive array of tips and tricks, we empower learners to navigate the complexities of academic inquiry with confidence and precision, without sacrificing depth or rigor.</p>
+
+<p class="body">By leveraging the collective wisdom of scholars, educators, and subject matter experts, we distill the essence of academic inquiry into digestible nuggets of knowledge, tailored to suit the unique needs and preferences of each learner. Whether it be strategies for effective note-taking, techniques for critical thinking and analysis, or insights into the latest research methodologies, our platform serves as a repository of invaluable tools and insights designed to enhance the learning experience and facilitate intellectual growth.</p>
+
+<p class="body">In essence, our platform represents a beacon of light amidst the murky waters of uncertainty, guiding learners on a transformative journey of self-discovery and enlightenment. With our educational tips and tricks as your compass, you can navigate the intricacies of the learning process with confidence and clarity, secure in the knowledge that you are equipped with the tools and resources you need to succeed. Join us as we embark on this exhilarating voyage of exploration and discovery, where the pursuit of knowledge knows no bounds.</p>
+            </div>
+            <div class="about">
+                <p class="title">Who Is This For</p>
+                <p class="title-2">Grade 12</p>
+                <p class="body">In the journey through Grade 12 and beyond, our platform is dedicated to revolutionizing the landscape of education by fostering an environment where learning is not only accessible but also enjoyable and engaging. Our primary objective is to empower learners to excel academically by providing them with the tools, resources, and support they need to navigate the challenges of the classroom with confidence and ease.</p>
+
+<p class="body">It's no secret that the modern world is replete with distractions and temptations that compete for the attention and energy of learners. From the allure of social media and video games to the myriad of recreational activities and hobbies that beckon from outside the confines of the classroom, the allure of non-academic pursuits can often overshadow the importance of academic achievement.</p>
+
+<p class="body">At the heart of our philosophy lies the recognition that the key to unlocking academic success lies not in coercing learners into begrudgingly completing assignments or memorizing facts and figures, but rather in harnessing the innate curiosity and enthusiasm that lies within each individual. By infusing the learning process with elements of fun, creativity, and exploration, we seek to reframe education as an exciting and rewarding journey of discovery.</p>
+
+<p class="body">Through a diverse array of interactive learning experiences, immersive multimedia resources, and dynamic instructional methodologies, we strive to captivate the hearts and minds of learners, inspiring them to approach their studies with a sense of wonder and excitement. Whether it's through gamified quizzes that transform mundane review sessions into exhilarating competitions or interactive simulations that bring abstract concepts to life in vivid detail, our platform is designed to spark curiosity, foster critical thinking, and ignite a passion for learning.</p>
+
+<p class="body">Moreover, we recognize that the traditional one-size-fits-all approach to education is inherently flawed, failing to accommodate the diverse learning styles, interests, and abilities of individual learners. That's why our platform emphasizes personalized learning experiences that are tailored to meet the unique needs and preferences of each student. By leveraging cutting-edge technology and adaptive learning algorithms, we empower learners to chart their own path to success, at their own pace and on their own terms.</p>
+
+<p class="body">In essence, our platform represents a paradigm shift in the way we conceive of education, transcending the confines of the traditional classroom to create a dynamic and inclusive learning ecosystem where curiosity reigns supreme and the pursuit of knowledge knows no bounds. Join us as we embark on this transformative journey together, where learning is not just a means to an end, but a lifelong adventure filled with excitement, discovery, and endless possibilities.</p>
+                <p class="title-2">College</p>
+                <p class="body">As students embark on the journey of college, it marks a pivotal transition from adolescence to adulthood, symbolizing a time of exploration, growth, and self-discovery. For many, college represents the pinnacle of their aspirations, a golden opportunity to carve out their place in the world and pursue their passions with fervor and determination.</p>
+
+<p class="body">However, amidst the excitement and anticipation that accompany this new chapter of life, it's all too easy to succumb to distractions and lose sight of the ultimate goal. The initial euphoria of independence and freedom often gives way to a sense of aimlessness and uncertainty, as students grapple with the weighty questions of identity, purpose, and direction.</p>
+
+<p class="body">It's during these formative years that the importance of maintaining focus and clarity of purpose becomes paramount. Without a clear sense of direction and purpose, it's all too easy to drift aimlessly through the endless sea of possibilities, never quite finding solid ground upon which to build the foundations of a meaningful and fulfilling life.</p>
+
+<p class="body">That's where our platform steps in, serving as a steadfast beacon of guidance and support in the tumultuous sea of college life. Our mission is simple yet profound: to safeguard your focus and empower you to stay true to your academic and personal aspirations, even in the face of adversity and distraction.</p>
+
+<p class="body">Through a combination of innovative tools, resources, and community support, we provide students with the tools they need to cultivate a sense of purpose and direction in their academic journey. From personalized goal-setting strategies and time management techniques to peer mentoring programs and support networks, we offer a comprehensive suite of resources designed to help you stay on track and achieve your full potential.</p>
+
+<p class="body">But perhaps the most powerful aspect of our platform lies in the strength of our community. As students and friends alike rally around our shared mission of academic excellence and personal growth, the collective energy and support generated by our community serve as a powerful force multiplier, amplifying your ability to stay focused and committed to your goals.</p>
+
+<p class="body">In essence, our platform represents more than just a repository of tools and resources; it's a living, breathing ecosystem of support and empowerment, where every interaction and engagement serves to reinforce your sense of purpose and ignite your passion for learning. Together, we can overcome the challenges and obstacles that lie ahead, and emerge stronger, wiser, and more resilient than ever before. Join us as we embark on this transformative journey together, where the pursuit of knowledge and self-discovery knows no bounds.</p>
+                <p class="title-2">Self Taught</p>
+                <p class="body">In the realm of self-taught learning, the boundaries of traditional education are transcended, and the pursuit of knowledge becomes an inclusive and accessible endeavor for all. Regardless of one's location, background, or age, the opportunity to learn and grow is open to everyone, and our platform is committed to empowering individuals on this transformative journey of self-discovery and enlightenment.</p>
+
+<p class="body">At the heart of our mission lies a deep-seated belief in the inherent potential of every individual to chart their own path to mastery and excellence. Whether you're a seasoned professional seeking to expand your skillset or a curious enthusiast eager to explore new horizons, our platform is designed to accommodate learners of all stripes and stripes.</p>
+
+<p class="body">We understand that the journey of self-directed learning can be a solitary and sometimes daunting endeavor. That's why we've dedicated ourselves to creating a supportive and nurturing environment where learners can thrive and flourish, free from the constraints of traditional classroom settings and rigid academic structures.</p>
+
+<p class="body">Our commitment to accessibility and inclusivity is reflected in every facet of our platform, from our user-friendly interface and intuitive navigation tools to our diverse array of subjects and modules. Whether you're passionate about literature, mathematics, computer science, or philosophy, we offer a comprehensive selection of resources designed to cater to your unique interests and learning preferences.</p>
+
+<p class="body">But perhaps the most transformative aspect of our platform lies in its adaptability and flexibility. With our 24/7 availability and asynchronous learning model, you have the freedom to learn at your own pace, on your own schedule, and from the comfort of your own home. There are no limits to what you can achieve or how far you can go—all you need is the willingness to embark on the journey of self-discovery and the commitment to see it through to fruition.</p>
+
+<p class="body">In essence, our platform represents more than just a repository of knowledge—it's a gateway to a world of endless possibilities and opportunities for growth and fulfillment. Whether you're embarking on a new career path, pursuing a lifelong passion, or simply seeking to expand your horizons, we invite you to join us on this exhilarating voyage of exploration and discovery. With our platform as your guide, the sky's the limit—and the journey is yours to define.</p>
+            </div>
+            <div class="about">
+                <p class="title">Why Us</p>
+                <p class="body">Choosing our platform for your learning needs is not just a decision—it's a transformative investment in your intellectual growth, personal development, and academic success. With a myriad of educational resources and platforms available at your fingertips, the question of why choose ours may naturally arise. Allow us to elucidate why our platform stands head and shoulders above the rest and why it's worth your consideration.</p>
+
+<p class="body">First and foremost, our platform embodies a holistic approach to learning that transcends the confines of traditional education. Rather than merely disseminating information in a passive and rote manner, we prioritize active engagement, critical inquiry, and experiential learning. Through our interactive question-based format, learners are not just passive recipients of knowledge but active participants in the learning process, empowered to explore, question, and discover at their own pace and on their own terms.</p>
+
+<p class="body">Moreover, our platform is built on the foundation of accessibility and inclusivity, ensuring that learners from all walks of life and backgrounds have equal opportunity to access high-quality educational content. Whether you're a seasoned professional looking to upskill, a student preparing for exams, or an aspiring enthusiast eager to explore new subjects, our platform offers a diverse array of resources and modules tailored to meet your unique needs and interests.</p>
+
+<p class="body">But perhaps the most compelling reason to choose our platform lies in the transformative power of our rewards system. We understand that intrinsic motivation is the driving force behind sustained learning and growth. That's why we've incorporated a system of rewards and incentives designed to motivate and inspire learners to achieve their full potential. Whether it's virtual badges, tangible prizes, or exclusive accolades, our rewards system serves as a powerful catalyst for engagement and achievement, transforming the learning experience from a chore into a rewarding and fulfilling journey of self-discovery.</p>
+
+<p class="body">Beyond the tangible rewards, our platform offers a supportive and nurturing community of like-minded learners, educators, and experts committed to fostering a culture of collaboration, innovation, and excellence. Through peer mentoring programs, discussion forums, and collaborative projects, learners have the opportunity to connect, collaborate, and learn from one another, enriching their educational experience and broadening their horizons in the process.</p>
+
+<p class="body">Furthermore, our platform is designed with the modern learner in mind, leveraging cutting-edge technology and adaptive learning algorithms to deliver personalized, immersive, and engaging educational experiences. Whether you prefer to learn on-the-go via mobile devices, immerse yourself in multimedia-rich content, or engage in real-time collaborative activities, our platform offers a seamless and intuitive learning experience tailored to suit your unique preferences and learning style.</p>
+
+<p class="body">In addition to our commitment to excellence in education, our platform also prioritizes affordability and accessibility. We believe that education should not be a privilege reserved for the few but a fundamental right accessible to all. That's why we offer a range of flexible subscription options and pricing plans designed to accommodate learners of all budgets and financial backgrounds, ensuring that cost is never a barrier to access.</p>
+
+<p class="body">In conclusion, choosing our platform isn't just about accessing educational content—it's about embarking on a transformative journey of discovery, empowerment, and growth. With our unique blend of interactive learning experiences, rewards-driven engagement, and supportive community atmosphere, we empower learners to unleash their full potential and achieve their academic and personal goals. Join us on this exhilarating voyage of exploration and discovery, where the pursuit of knowledge knows no bounds, and the possibilities are limitless.</p>
+            </div>
+            <div class="epmtyspace" style="height:10px"></div>
+        </div>
+        `;
+    }
+}

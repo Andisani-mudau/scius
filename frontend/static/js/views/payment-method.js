@@ -1,0 +1,62 @@
+import AbstractView from "./AbstractView.js";
+
+export default class extends AbstractView {
+    constructor(params) {
+        super(params);
+        this.setTitle("SUBCON | Payment Method");
+    }
+
+    async getHtml() {
+        return `
+            <div class="banner-image">
+            <div class="fade">
+                <div class="banner-content">
+                    <h1>WAY OF PAYMENT</h1>
+                    <p>Which payment method do you prefer?</p>  
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="payment-method-item">
+                <div class="image"></div>
+                <div class="content">
+                    <p class="title">PayPal</p>
+                    </div>            
+            </div>
+            <div class="payment-method-item">
+                <div class="image"></div>
+                <div class="content">
+                    <p class="title">Stripe</p>
+                    </div>            
+            </div>
+            <div class="payment-method-item">
+                <div class="image"></div>
+                <div class="content">
+                    <p class="title">Authorized.Net</p>
+                    </div>            
+            </div>
+            <div class="payment-method-item">
+                <div class="image"></div>
+                <div class="content">
+                    <p class="title">Square</p>
+                    </div>            
+            </div>
+            <div class="payment-method-item">
+                <div class="image">
+                    <i class="badge-info"></i>
+                </div>
+                <div class="content">                    
+                    <p class="title">Braintree</p>
+                    </div>            
+            </div>
+            <div class="payment-method-item">
+                <div class="image"></div>
+                <div class="content">
+                    <p class="title">Adyen</p> 
+                    </div>            
+            </div>            
+        </div>       
+        <div class="epmtyspace" style="height: 10px"></div>
+        `;
+    }
+}

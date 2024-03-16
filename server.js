@@ -4,15 +4,95 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
+const fs = require('fs');
 const app = express();
 const collection = require('./database/signup');
+const Dashboard = require('./database/dashboard');
+
+// Set EJS as templating engine
+app.set('view engine', 'ejs');
 
 app.use("/static", express.static(path.resolve(__dirname, "frontend", "static")));
 app.use("/database", express.static(path.resolve(__dirname, "database")));
 
-app.get("/*", (req, res) => {
+/* app.get("/*", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+}); */
+//app routes start
+app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
 });
+app.get("/dashboard", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/about", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/account", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/community", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/module-info", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/module-pay", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/module-play", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/module-results-lost", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/module-results-win", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/module-submitted", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/module-wait", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/modules", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/notifications", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/payment-method", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/personal-details", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/rewards", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/settings", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/sign-in", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+app.get("/sign-up", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+});
+//end routes
+app.get("/data", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "database"));
+});
+/*
+app.get("/*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "index.ejs"));
+});
+*/
+
+app.get("/database", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "database"));
+});
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json()); // Updated to use built-in JSON parsing middleware
@@ -117,11 +197,12 @@ app.post("/sign-up", upload.single('image'), async(req, res)=>{
     
     await collection.insertMany([data]);
     res.redirect('/sign-in');
+   
 });
-
+var userInput;
 app.post("/sign-in", async(req, res, err)=>{
     try {
-	const userInput = req.body.userInput;
+	userInput = req.body.userInput;
 	const password = req.body.password;
 
 	// Find user by username
@@ -142,20 +223,30 @@ app.post("/sign-in", async(req, res, err)=>{
 	}
     } catch (error) {
 	console.error(error);
-	res.status(500).send("<p><b>Error signing in</b></p>");
+	res.status(500).send("Error signing in");
     }
 });
 
-app.get("/dasboard", async(req, res)=>{
+app.get("/database/data", async(req, res)=>{
     try {
+	// Find dashboard by country
 	
-	const x = "Hello World";
-	
-	
-	
+	const dashboard = await Dashboard.findOne({"country": "Global"});
+
+	if (!dashboard) {
+	    // Dashboard not found for the global country
+	    console.log('Dashboard:', dashboard);
+	    return res.status(404).send('Dashboard not found for the global country');
+	}
+
+	// Dashboard found, send it as JSON response
+	console.log('Dashboard:', dashboard);
+	res.json(dashboard);
     } catch (error) {
-	console.error(error);
-	res.status(500).send("...");
+	// Handle errors
+	console.error('Error finding dashboard:', error);
+	res.status(500).send(`Error handling dashboard`);
     }
 });
+
 app.listen(process.env.PORT || 3000, () => console.log("Server is running smoothly..."));

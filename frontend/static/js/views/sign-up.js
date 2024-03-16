@@ -1,0 +1,46 @@
+import AbstractView from "./AbstractView.js";
+
+export default class extends AbstractView {
+    constructor(params) {
+	super(params);
+	this.setTitle("SUBCON | Create Account");
+    }
+
+    async getHtml() {
+	return `
+            <div class="dashboard-content">
+                <form action="/sign-up" method="post" id="signupForm" class="signup-details" >
+                    <div class="general-data">
+                       <div class="extend">
+                            <label for="imageInput"><span id="imageName">Change profile image...</span></label>
+                            <input class="user-image" type="file" id="imageInput" name="image" accept=".jpg, .png">
+                        </div>
+                        <div>
+                            <input type="text" name="userName" id="userName" placeholder="Username" required>
+                        </div>
+                        <div>
+                            <input type="text" name="gender" id="gender" placeholder="Gender">
+                            <input type="number" name="age" id="age" placeholder="Age">
+                        </div>
+                        <div>
+                            <input type="text" name="firstName" id="firstName" placeholder="Firstname">
+                            <input type="text" name="lastName" id="lastName" placeholder="Lastname">
+                        </div>
+                        <div class="extend">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone">
+                        </div>
+                        <div>
+                            <input type="password" name="password" id="password" placeholder="Password">
+                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm password">
+                        </div>
+                        <div class="dontHaveAccount">
+                            <a href="/sign-in" class="nav__link" data-link>Already have an account? Sign in...</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="signup-button">Create Account</button>
+                </form>
+            </div>
+        `;
+    }
+}

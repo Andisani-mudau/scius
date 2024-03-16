@@ -1,0 +1,99 @@
+
+.personal-details-content{
+    margin-top: 20px;
+}
+.personal-details{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--sidebar-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--text-color);
+    margin-top: 20px;
+    max-width: 600px;
+}
+.personal-details .general-data, .residential-data, .important-data{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-color-light);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.personal-details .general-data div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    
+}
+.personal-details .residential-data div{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    
+}
+.personal-details .important-data div{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    
+}
+.personal-details input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    
+    caret-color: var(--primary-color);
+    -webkit-text-fill-color: var(--input-color);
+    background: var(--sidebar-color);
+    color: var(--input-color);
+    outline: none;
+}
+.personal-details input:hover{
+    background: var(--body-color);
+    caption-side: "Hello";
+}
+.personal-details input:active{
+    color: var(--input-color);
+}
+.personal-details button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.extend{
+    flex-direction: column !important;
+}
+.personal-details button:hover{
+    background: var(--toggle-color);
+}
+.personal-details button:active{
+    background: var(--primary-color-light);
+    color: var(--text-color);
+}
+input[type="file"]{
+    display: none;
+}
+.extend label{
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--sidebar-color);
+    color: var(--input-color);
+    border-radius: 5px;
+    font-size: 17px;
+}

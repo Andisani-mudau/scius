@@ -1,0 +1,129 @@
+
+.dashboard-content{
+    margin-top: 20px;
+}
+
+.account-item{
+    width: 100%;
+    height: unset;
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    padding: 5px 10px;
+    border: none;
+}
+.account-item:hover{
+    background: var(--primary-color);
+    color: #fff;
+}
+.account-item:active{
+    background: var(--toggle-color);
+    color: #fff;
+}
+.account-item .image{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    background: var(--primary-color-light);
+}
+.account-item:hover .image{
+    background: var(--sidebar-color);
+}
+.account-item .content{
+    height: 60px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    
+}
+
+.account-item .title{
+    font-weight: 500;
+    font-size: 17px;
+    
+}
+/* ..... */
+#account-popup, #account-popup-2{
+    background: var(--sidebar-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left:  40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    bottom: 10px;
+    width: calc(100vw - 40px);
+    max-width: 600px;
+    display: block;
+    
+}
+@media (max-width: 600px){
+    #account-popup, #account-popup-2{
+        width: calc(100vw - 20px);
+        margin-left: unset;
+    }
+}
+#account-popup .more-info, #account-popup-2 .more-info{
+    padding: 10 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+#account-popup .more-info .question, #account-popup-2 .more-info .question{
+    padding: 10 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+}
+#account-popup .take-action, #account-popup-2 .take-action{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    gap: 10px;
+}
+#account-popup .take-action button, #account-popup-2 .take-action button{
+    width: 100%;
+    padding: 15px 10px;
+    font-weight: 500;
+    font-size: 20px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    color: #fff;
+}
+#account-popup .take-action button:hover, #account-popup-2 .take-action button:hover{
+    background: var(--toggle-color);
+}
+#account-popup .take-action button:active, #account-popup-2 .take-action button:active{
+    background: var(--primary-color-light);
+    color: var(--text-color);
+}
+#account-popup .take-action #cancel, #account-popup-2 .take-action #cancel-2 {
+    background: var(--primary-color-light);
+    color: var(--text-color);
+}
+#account-popup .take-action #cancel:hover, #account-popup-2 .take-action #cancel-2:hover{
+    background: var(--toggle-color);
+}
+#account-popup .take-action #cancel:active, #account-popup-2 .take-action #cancel-2:active{
+    background: var(--primary-color);
+}
+.hidden{
+    display: none !important;
+}
