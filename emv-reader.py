@@ -1,9 +1,9 @@
 import serial
 
 # Define MSRX6 connection details
-PORT = "COM3"  # Change to your device's port
-BAUDRATE = 9600  # Standard MSRX6 baud rate
-TIMEOUT = 1  # Serial timeout in seconds
+PORT = "COM3"  # Replace with your device's port
+BAUDRATE = 9600  # Default baud rate for MSRX6
+TIMEOUT = 1  # Timeout for serial communication in seconds
 
 def connect_to_msr():
     """
@@ -25,10 +25,12 @@ def listen_for_card(msr):
     try:
         while True:
             if msr.in_waiting > 0:  # Check if data is available
-                card_data = msr.read_all().decode('utf-8').strip()
+                card_data = msr.read_all().decode('utf-8', errors='ignore').strip()
                 if card_data:
                     print(f"Card Data Received: {card_data}")
-                    return card_data  # Return or process the received data
+                    return card_data
+            else:
+                print("No data received yet. Waiting...")
     except KeyboardInterrupt:
         print("Stopped listening for card swipes.")
     except Exception as e:
